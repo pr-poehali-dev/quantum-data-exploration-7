@@ -1,3 +1,7 @@
-# quantum-data-exploration-7
+# FOLIO. - Портфолио для креативщиков
 
-Initial repository setup for pr-poehali-dev/quantum-data-exploration-7
+![Preview](preview.png)
+
+Элегантный лендинг для креативных профессионалов: дизайнеров, фотографов, художников. Включает hero-секцию с анимированными изображениями, манифест, интерактивные карточки возможностей, галерею работ, карусель, блог-секцию, тарифы и футер. Плавные анимации на Framer Motion, кастомный курсор, smooth scroll на Lenis.
+
+`"tags": ["portfolio", "creative", "dark", "animations", "pricing", "glass"]`
