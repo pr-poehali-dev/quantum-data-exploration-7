@@ -3,18 +3,18 @@ import { Check } from "lucide-react"
 
 const plans = [
   {
-    name: "Старт",
-    price: "1 200",
-    period: " руб/мес",
-    description: "Для личного портфолио",
-    features: ["5 страниц", "Свой домен", "Базовая аналитика", "Поддержка по email"],
+    name: "Базовый",
+    price: "от 500",
+    period: " руб",
+    description: "Визитки и простые макеты",
+    features: ["Визитки (двусторонние)", "1 вариант дизайна", "Правки включены", "Файл для печати (PDF)"],
   },
   {
-    name: "Про",
-    price: "2 900",
-    period: " руб/мес",
-    description: "Для растущих авторов",
-    features: ["Безлимит страниц", "Приоритет поддержки", "Расширенная аналитика", "Свой брендинг", "Работа в команде"],
+    name: "Полный",
+    price: "от 1 500",
+    period: " руб",
+    description: "Сложные проекты под ключ",
+    features: ["Журналы и постеры", "Рекламные макеты", "Коллажи из ваших фото", "2 варианта дизайна", "Печать с доставкой"],
     popular: true,
   },
 ]
@@ -29,8 +29,8 @@ export function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-serif text-foreground">Простые и понятные цены</h2>
-          <p className="text-muted-foreground mt-4 max-w-md mx-auto">Начните бесплатно, платите когда готовы.</p>
+          <h2 className="text-3xl md:text-5xl font-serif text-foreground">Прозрачные цены, честный результат</h2>
+          <p className="text-muted-foreground mt-4 max-w-md mx-auto">Каждый заказ индивидуален — учтём все ваши пожелания.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">

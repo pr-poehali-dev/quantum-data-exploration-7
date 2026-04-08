@@ -52,24 +52,25 @@ function LayoutAnimation() {
   )
 }
 
-function SpeedIndicator() {
+function PrintIndicator() {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    const timeout = setTimeout(() => setProgress(100), 500)
-    return () => clearTimeout(timeout)
+    const interval = setInterval(() => {
+      setProgress((prev) => (prev >= 100 ? 0 : prev + 2))
+    }, 40)
+    return () => clearInterval(interval)
   }, [])
 
   return (
     <div className="flex flex-col items-center justify-center h-full gap-4">
-      <span className="text-3xl md:text-4xl font-sans font-medium text-foreground">100ms</span>
-      <span className="text-sm text-muted-foreground">Загрузка</span>
+      <span className="text-3xl md:text-4xl font-sans font-medium text-foreground">HD</span>
+      <span className="text-sm text-muted-foreground">Качество печати</span>
       <div className="w-full max-w-[120px] h-1.5 bg-foreground/10 rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-primary rounded-full"
-          initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.04 }}
         />
       </div>
     </div>
@@ -86,11 +87,11 @@ export function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Возможности
+          Наши услуги
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Typography Card */}
+          {/* Print Design Card */}
           <motion.div
             className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
             initial={{ opacity: 0, y: 30 }}
@@ -105,12 +106,12 @@ export function FeaturesSection() {
               <TypeTester />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Типографика</h3>
-              <p className="text-muted-foreground text-sm mt-1">Красивые шрифты, которые идеально масштабируются.</p>
+              <h3 className="font-serif text-xl text-foreground">Журналы и постеры</h3>
+              <p className="text-muted-foreground text-sm mt-1">Разработка макетов для печати: от журналов до рекламных постеров.</p>
             </div>
           </motion.div>
 
-          {/* Layouts Card */}
+          {/* Business Cards & Branding Card */}
           <motion.div
             className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
             initial={{ opacity: 0, y: 30 }}
@@ -125,12 +126,12 @@ export function FeaturesSection() {
               <LayoutAnimation />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Макеты</h3>
-              <p className="text-muted-foreground text-sm mt-1">Гибкие сетки, которые адаптируются под контент.</p>
+              <h3 className="font-serif text-xl text-foreground">Визитки и брендинг</h3>
+              <p className="text-muted-foreground text-sm mt-1">Фирменный стиль, визитки и рекламные макеты под ваш бизнес.</p>
             </div>
           </motion.div>
 
-          {/* Speed Card */}
+          {/* Collage & Photo Card */}
           <motion.div
             className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
             initial={{ opacity: 0, y: 30 }}
@@ -142,11 +143,11 @@ export function FeaturesSection() {
             data-clickable
           >
             <div className="flex-1">
-              <SpeedIndicator />
+              <PrintIndicator />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Скорость</h3>
-              <p className="text-muted-foreground text-sm mt-1">Молниеносная загрузка страниц для ваших гостей.</p>
+              <h3 className="font-serif text-xl text-foreground">Коллажи из фото</h3>
+              <p className="text-muted-foreground text-sm mt-1">Создаём коллажи из ваших фотографий с печатью в HD-качестве.</p>
             </div>
           </motion.div>
         </div>

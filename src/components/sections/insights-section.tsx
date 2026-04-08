@@ -5,24 +5,24 @@ import { ArrowRight } from "lucide-react"
 
 const articles = [
   {
-    title: "Искусство визуального сторителлинга",
-    category: "Дизайн",
+    title: "Как выбрать правильный макет для вашего постера",
+    category: "Советы",
     image: "/visual-storytelling-design-article.jpg",
   },
   {
-    title: "Как создать личный бренд онлайн",
-    category: "Стратегия",
+    title: "5 правил дизайна визитки, которая запоминается",
+    category: "Брендинг",
     image: "/personal-branding-digital-marketing.jpg",
   },
   {
-    title: "Тренды типографики 2025",
-    category: "Типографика",
+    title: "Тренды в печатной рекламе 2025 года",
+    category: "Тренды",
     image: "/typography-trends-modern-fonts.jpg",
   },
   {
-    title: "Минимализм в дизайне портфолио",
+    title: "Коллаж из фото: идеи для подарка и декора",
     category: "Вдохновение",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://cdn.poehali.dev/projects/17b9c730-ffec-4c24-9a55-402ec6514d77/files/f77328ad-97a8-4041-b126-d653bc5ec63c.jpg",
   },
 ]
 
