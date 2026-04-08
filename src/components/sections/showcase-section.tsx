@@ -5,6 +5,7 @@ const showcaseImages = [
   "https://cdn.poehali.dev/projects/17b9c730-ffec-4c24-9a55-402ec6514d77/files/263b9e98-5f59-4e68-9457-8bed5816a567.jpg",
   "https://cdn.poehali.dev/projects/17b9c730-ffec-4c24-9a55-402ec6514d77/files/f77328ad-97a8-4041-b126-d653bc5ec63c.jpg",
   "https://cdn.poehali.dev/projects/17b9c730-ffec-4c24-9a55-402ec6514d77/files/6cd32ee5-dd3a-4043-9351-d8a2ca009f3f.jpg",
+  "https://cdn.poehali.dev/projects/17b9c730-ffec-4c24-9a55-402ec6514d77/bucket/8e7b160d-d9b4-4ab9-964d-214ecafa7f61.png",
 ]
 
 export function ShowcaseSection() {
@@ -17,8 +18,9 @@ export function ShowcaseSection() {
   const y1 = useTransform(scrollYProgress, [0, 1], [100, -100])
   const y2 = useTransform(scrollYProgress, [0, 1], [150, -150])
   const y3 = useTransform(scrollYProgress, [0, 1], [80, -80])
+  const y4 = useTransform(scrollYProgress, [0, 1], [120, -120])
 
-  const yValues = [y1, y2, y3]
+  const yValues = [y1, y2, y3, y4]
 
   return (
     <section ref={containerRef} className="bg-background px-6 py-32 overflow-hidden">
@@ -32,7 +34,7 @@ export function ShowcaseSection() {
           Галерея
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           {showcaseImages.map((src, i) => (
             <motion.div
               key={i}
