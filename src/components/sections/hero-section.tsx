@@ -78,7 +78,7 @@ export function HeroSection() {
         transition={{ duration: 1, delay: 0.8 }}
       >
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center text-foreground mix-blend-difference">
-          Дизайн, который <em className="italic">говорит</em>.
+          Сохраним ваши <em className="italic">моменты</em>.
         </h1>
       </motion.div>
 
